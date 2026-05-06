@@ -26,6 +26,7 @@ export default function InicioNuevo() {
     const location = useLocation();
     const navigate = useNavigate();
     const banner = `/${storeConfig.media.heroImage}`;
+    const banner2 = `/${storeConfig.media.heroImage2}`;
 
     useEffect(() => {
         if (actions?.fetchProducts) {
@@ -106,7 +107,7 @@ export default function InicioNuevo() {
                     {/* IMAGEN SIN ALTURA FIJA */}
                     <div className="w-full">
                         <img
-                            src={banner}
+                            src={banner2}
                             alt="banner"
                             className="
                 w-full
@@ -119,7 +120,7 @@ export default function InicioNuevo() {
                     </div>
 
                     {/* BLOQUE NEGRO DINÁMICO */}
-                    <div className="
+                    {/*    <div className="
             bg-black
             px-5
             py-6
@@ -157,7 +158,7 @@ export default function InicioNuevo() {
                             {storeConfig.branding.heroSubtitle}
                         </p>
 
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* =========================
@@ -166,11 +167,12 @@ export default function InicioNuevo() {
                 <div className="
         hidden lg:flex
         relative
-        h-[650px]
-        lg:h-[700px]
+       h-[500px]
+       lg:h-[614px]
         items-end
         justify-center
         overflow-hidden
+        
     ">
 
                     <div
@@ -182,7 +184,7 @@ export default function InicioNuevo() {
                 md:bg-[position:center_-100px]
 
                 lg:bg-[length:100vw_auto]
-                lg:bg-[position:center_-200px]
+                lg:bg-[position:center_-0px]
 
                 xl:bg-[length:100vw_auto]
                 xl:bg-[position:center_-250px]
@@ -196,7 +198,7 @@ export default function InicioNuevo() {
                         style={{ backgroundImage: `url(${banner})` }}
                     />
 
-                    <div className="
+                    {/*  <div className="
             relative z-10
             w-full
             max-w-3xl
@@ -224,7 +226,7 @@ export default function InicioNuevo() {
                             {storeConfig.branding.heroSubtitle}
                         </p>
 
-                    </div>
+                    </div> */}
                 </div>
 
             </section>
@@ -272,7 +274,7 @@ export default function InicioNuevo() {
             <section className="max-w-7xl mx-auto px-2 sm:px-4 py-12">
                 <div className="text-center mb-10">
                     <h2 className="text-2xl md:text-3xl font-serif font-semibold tracking-wide">
-                        Productos destacados
+                        Productos Destacados
                     </h2>
 
                     <div className="w-16 h-[2px] bg-amber-500 mx-auto mt-4"></div>
@@ -320,7 +322,7 @@ shadow-lg shadow-amber-500/20
             {/*  <section id="asesoria">
                 <Asesoria />
             </section> */}
-            <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id='asesoria'>
+            <section className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 py-16" id='asesoria'>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
                     {/* Columna izquierda: texto */}
                     <div className="md:col-span-1 text-center md:text-left">
@@ -334,7 +336,7 @@ shadow-lg shadow-amber-500/20
                         <p className="mt-2 text-lg text-gray-500">
                             {ADDRESS_CITY.replace(ADDRESS_CITY.split(",")[0] + ", ", "")}
                         </p>
-                        <p className="mt-2 text-lg text-gray-500">Punta Arenas</p>
+                        <p className="mt-2 text-lg text-gray-500">Yuty Caazapá</p>
 
                         <p className="mt-2 text-gray-600">{HOURS}</p>
 
@@ -410,9 +412,9 @@ shadow-lg shadow-amber-500/20
   `}</style>
             </section>
             <section className="relative bg-white py-8 fade-in-section border-y border-gray-200">
-                {/*  <div className="relative z-10 overflow-hidden whitespace-nowrap mx-0 md:mx-[104px]">
+                <div className="relative z-10 overflow-hidden whitespace-nowrap mx-0 md:mx-[104px]">
                     <div className="brands-track will-change-transform">
-                 
+
                         <div className="brands-group">
                             <div className="brand-container">
                                 <img src={afnan} alt="Afnan" className="brand-img" />
@@ -446,7 +448,7 @@ shadow-lg shadow-amber-500/20
                             </div>
                         </div>
 
-                    
+
                         <div className="brands-group" aria-hidden="true">
                             <div className="brand-container">
                                 <img src={afnan} alt="Afnan" className="brand-img" />
@@ -481,7 +483,7 @@ shadow-lg shadow-amber-500/20
                         </div>
                     </div>
                 </div>
- */}
+
                 <style>{`
         .brands-track {
             display: inline-flex;

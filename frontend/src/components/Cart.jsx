@@ -50,7 +50,7 @@ export default function Cart({ isOpen: controlledOpen, onClose: controlledOnClos
   const navigate = useNavigate();
   const location = useLocation();
   const isWholesale = location.pathname.startsWith("/mayorista");
-  const pricePrefix = isWholesale ? "$" : "$";
+  const pricePrefix = isWholesale ? "₲" : "₲";
 
 
   const isRouteMode = controlledOpen === undefined && controlledOnClose === undefined;
@@ -254,7 +254,7 @@ Pago: ${customerData.payment}
   // ===============================
 
   const sendToWhatsApp = () => {
-    const phone = "56964077278"; // ⚠️ CAMBIAR POR EL NÚMERO DEL CLIENTE
+    const phone = "595976408532"; // ⚠️ CAMBIAR POR EL NÚMERO DEL CLIENTE
     const text = buildWhatsAppMessage();
 
     const url = `https://wa.me/${phone}?text=${text}`;

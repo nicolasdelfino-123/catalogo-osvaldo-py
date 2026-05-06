@@ -1555,7 +1555,7 @@ export default function AdminProducts() {
                                                 </div>
                                             ) : (
                                                 <div className="flex items-center justify-center gap-2">
-                                                    <span className="whitespace-nowrap tabular-nums">$ {Number(retailShown).toLocaleString("es-AR")}</span>
+                                                    <span className="whitespace-nowrap tabular-nums">₲ {formatPrice(retailShown)}</span>
                                                     <button
                                                         type="button"
                                                         className="px-2 py-1 border rounded hover:bg-gray-50"
@@ -1600,7 +1600,7 @@ export default function AdminProducts() {
                                             ) : (
                                                 <div className="flex items-center justify-center gap-2">
                                                     <span className="whitespace-nowrap tabular-nums">
-                                                        {wholesaleShown ? `$ ${formatPrice(wholesaleShown)}` : "—"}
+                                                        {wholesaleShown ? `₲ ${formatPrice(wholesaleShown)}` : "—"}
                                                     </span>
                                                     <button
                                                         type="button"
@@ -2143,7 +2143,7 @@ export default function AdminProducts() {
 
                                 <div className="relative">
                                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-                                        $
+                                        ₲
                                     </span>
 
                                     <input
@@ -2170,7 +2170,7 @@ export default function AdminProducts() {
 
                                 <div className="relative">
                                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-                                        US$
+                                        ₲
                                     </span>
 
                                     <input
@@ -2197,9 +2197,9 @@ export default function AdminProducts() {
                                 {(form.volume_options || []).map((row, idx) => (
                                     <div key={`${row.ml}-${idx}`} className="flex items-center justify-between text-sm border rounded px-3 py-2">
                                         <span>
-                                            {row.ml != null ? `${row.ml} ml` : "Sin ml"} · {Number(row.price) > 0 ? `$${Number(row.price).toLocaleString("es-AR")}` : "Consultar"}
+                                            {row.ml != null ? `${row.ml} ml` : "Sin ml"} · {Number(row.price) > 0 ? `₲${Number(row.price).toLocaleString("es-AR")}` : "Consultar"}
                                             {Number(row.price_wholesale) > 0
-                                                ? ` · Mayorista $${formatPrice(row.price_wholesale)}`
+                                                ? ` · Mayorista ₲${formatPrice(row.price_wholesale)}`
                                                 : ""}
                                             {` · Stock ${Number.isFinite(Number(row.stock)) ? Number(row.stock) : 0}`}
                                         </span>

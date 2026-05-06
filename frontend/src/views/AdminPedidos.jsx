@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const API = import.meta.env.VITE_BACKEND_URL?.replace(/\/+$/, "") || "";
+const CURRENCY_SYMBOL = "₲";
 
 export default function AdminPedidos() {
     const [orders, setOrders] = useState([]);
@@ -90,7 +91,7 @@ export default function AdminPedidos() {
 
                                 <td className="p-2">{o.customer_first_name} {o.customer_last_name}</td>
                                 {/*     <td className="p-2">{o.customer_email}</td> */}
-                                <td className="p-2">${o.total_amount?.toLocaleString() || 0}</td>
+                                <td className="p-2">{CURRENCY_SYMBOL}{o.total_amount?.toLocaleString() || 0}</td>
                                 {/*     <td className="p-2">
                                     <span
                                         className={`px-2 py-1 rounded text-xs ${o.status === "enviado"
@@ -157,7 +158,7 @@ export default function AdminPedidos() {
 
                 // detectar mayorista: si los precios parecen mayoristas
                 const isWholesale = items.some(i => i.price && i.price < 1000);
-                const currency = isWholesale ? "$" : "$";
+                const currency = CURRENCY_SYMBOL;
 
                 return (
                     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">

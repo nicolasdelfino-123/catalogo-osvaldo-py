@@ -4,6 +4,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { withWholesale } from "../../../utils/wholesaleMode"; // ✅ ruta correcta desde /components/product
 import { PERFUME_CATEGORY_DEFINITIONS as CATEGORIES } from "../../../utils/perfumeCategories.js";
 
+const CURRENCY_SYMBOL = "₲";
+
 export default function SidebarFiltersNuevo({
     currentCategorySlug,
     onSelectCategory,
@@ -98,10 +100,10 @@ export default function SidebarFiltersNuevo({
                 const maxLabel = currentMax.toLocaleString("es-AR");
                 const priceLabel =
                     minActive && maxActive
-                        ? `$${minLabel} - $${maxLabel}`
+                        ? `${CURRENCY_SYMBOL}${minLabel} - ${CURRENCY_SYMBOL}${maxLabel}`
                         : minActive
-                            ? `Desde $${minLabel}`
-                            : `Hasta $${maxLabel}`;
+                            ? `Desde ${CURRENCY_SYMBOL}${minLabel}`
+                            : `Hasta ${CURRENCY_SYMBOL}${maxLabel}`;
 
                 tags.push({
                     type: "price",
@@ -231,8 +233,8 @@ export default function SidebarFiltersNuevo({
                 </h4>
 
                 <div className="flex items-center justify-between text-sm mb-2">
-                    <span>${p.min.toLocaleString("es-AR")}</span>
-                    <span>${p.max.toLocaleString("es-AR")}</span>
+                    <span>{CURRENCY_SYMBOL}{p.min.toLocaleString("es-AR")}</span>
+                    <span>{CURRENCY_SYMBOL}{p.max.toLocaleString("es-AR")}</span>
                 </div>
                 <div className="flex gap-2 mt-3">
                     <button
