@@ -179,18 +179,8 @@ export default function InicioNuevo() {
                         className="
                 absolute inset-0
                 bg-no-repeat
-
-                md:bg-[length:100vw_auto]
-                md:bg-[position:center_-100px]
-
-                lg:bg-[length:100vw_auto]
-                lg:bg-[position:center_-0px]
-
-                xl:bg-[length:100vw_auto]
-                xl:bg-[position:center_-250px]
-
-                2xl:bg-[length:100vw_auto]
-                2xl:bg-[position:center_-80px]
+                bg-top
+                bg-[length:100%_auto]
 
                 brightness-110
                 saturate-110
