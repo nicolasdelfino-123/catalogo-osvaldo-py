@@ -162,7 +162,7 @@ export default function AdminPedidos() {
 
                 return (
                     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                        <div className="bg-white w-full max-w-3xl rounded-lg shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
+                        <div className="bg-white text-gray-900 w-full max-w-3xl rounded-lg shadow-lg p-6 relative overflow-y-auto max-h-[90vh]">
 
                             <button
                                 className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
@@ -237,7 +237,7 @@ export default function AdminPedidos() {
                                                             {i.product_name || i.title || "Producto sin nombre"}
                                                         </span>
                                                         {(itemBrand || itemMl) && (
-                                                            <span className="block text-xs text-gray-500">
+                                                            <span className="block text-xs text-gray-600">
                                                                 {[itemBrand, itemMl]
                                                                     .filter(Boolean)
                                                                     .join(" - ")}
