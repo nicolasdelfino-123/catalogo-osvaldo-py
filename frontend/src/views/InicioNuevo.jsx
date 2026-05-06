@@ -164,28 +164,11 @@ export default function InicioNuevo() {
                 {/* =========================
        DESKTOP (NO TOCAR)
        ========================= */}
-                <div className="
-        hidden lg:flex
-        relative
-       h-[500px]
-       lg:h-[614px]
-        items-end
-        justify-center
-        overflow-hidden
-        
-    ">
-
-                    <div
-                        className="
-                absolute inset-0
-                bg-no-repeat
-                bg-top
-                bg-[length:100%_auto]
-
-                brightness-110
-                saturate-110
-            "
-                        style={{ backgroundImage: `url(${banner})` }}
+                <div className="hidden lg:block w-full overflow-hidden">
+                    <img
+                        src={banner}
+                        alt="banner"
+                        className="w-full h-auto object-contain brightness-110 saturate-110"
                     />
 
                     {/*  <div className="
