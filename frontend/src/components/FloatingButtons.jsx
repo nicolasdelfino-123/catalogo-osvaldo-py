@@ -15,6 +15,7 @@ export default function FloatingButtons() {
     );
 
     const WA_URL = `https://wa.me/${storeConfig.contact.whatsapp}?text=${mensaje}`;
+    const TIKTOK_URL = "https://www.tiktok.com/@auraperfumesyuty";
 
 
     return (
@@ -103,6 +104,49 @@ export default function FloatingButtons() {
             transition
           ">
                         WhatsApp
+                    </span>
+                </a>
+                {/* TikTok */}
+                <a
+                    href={TIKTOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                    className="
+pointer-events-auto
+group relative
+w-10 h-10 sm:w-14 sm:h-14
+rounded-full
+bg-black
+flex items-center justify-center
+shadow-xl
+hover:scale-105 active:scale-95 transition
+outline-none focus:ring-2 focus:ring-white/50
+"
+                >
+                    {/* ícono TikTok */}
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        className="w-6 h-6 sm:w-7 sm:h-7 text-white"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M19.59 6.69a4.83 4.83 0 0 1-3.77-1.92V15.5a5.51 5.51 0 1 1-4.77-5.45v2.79a2.73 2.73 0 1 0 1.98 2.62V2h2.79a4.85 4.85 0 0 0 3.77 4.69z"
+                        />
+                    </svg>
+
+                    {/* Tooltip */}
+                    <span className="
+absolute right-full mr-2 hidden sm:block
+whitespace-nowrap
+px-2 py-1 text-[12px] rounded-md
+bg-black/80 text-white
+opacity-0 translate-x-1
+group-hover:opacity-100 group-hover:translate-x-0
+transition
+">
+                        TikTok
                     </span>
                 </a>
             </div>
