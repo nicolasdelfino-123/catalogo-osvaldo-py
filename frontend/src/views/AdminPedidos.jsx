@@ -187,6 +187,10 @@ export default function AdminPedidos() {
                                 <p>
                                     <strong>Cliente:</strong> {selected.customer_first_name}
                                 </p>
+                                <p>
+                                    <strong>Teléfono:</strong>{" "}
+                                    {selected.customer_phone || selected.shipping_address?.phone || "Sin teléfono"}
+                                </p>
 
                                 <p>
                                     <strong>Forma de pago:</strong>{" "}
